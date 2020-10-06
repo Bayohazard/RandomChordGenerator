@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Random Chord Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1 class="text-center text-white my-4">Random Chord Generator</h1>
+    <form action="index.html" method="post">
+
+      <!-- Start of chord type section -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col container-background rounded-lg header">
+            <h3 class="text-white mt-3 container-padding">Chord Type</h3>
+            <div class="container">
+              <div class="row no-gutters">
+                <!-- Start of triads section -->
+                <div class="triads-section col-md-6 mt-4">
+
+                  <h5>Triads</h5>
+
+                  <input type="checkbox" id="major" name="chord" value="major">
+                  <label for="major" class="text-white ml-2">Major</label><br>
+
+                  <input type="checkbox" id="minor" name="chord" value="minor">
+                  <label for="minor" class="text-white ml-2">Minor</label><br>
+
+                  <input type="checkbox" id="diminished" name="chord" value="diminished">
+                  <label for="diminished" class="text-white ml-2">Diminished</label><br>
+
+                  <input type="checkbox" id="augmented" name="chord" value="augmented">
+                  <label for="augmented" class="text-white ml-2">Augmented</label><br>
+                </div>
+                <!-- End of triads section -->
+
+                <!-- Start of sevenths section -->
+                <div class="sevenths-section col-md-6 mt-4">
+
+                  <h5>Sevenths</h5>
+
+                  <input type="checkbox" id="major-7" name="chord" value="major-7">
+                  <label for="major-7" class="text-white ml-2">Major Seventh</label><br>
+
+                  <input type="checkbox" id="minor-7" name="chord" value="minor-7">
+                  <label for="minor-7" class="text-white ml-2">Minor Seventh</label><br>
+
+                  <input type="checkbox" id="dominant-7" name="chord" value="dominant-7">
+                  <label for="dominant-7" class="text-white ml-2">Dominant Seventh</label><br>
+
+                  <input type="checkbox" id="minor-major-7" name="chord" value="minor-major-7">
+                  <label for="minor-major-7" class="text-white ml-2">Major Minor Seventh</label><br>
+                </div>
+                <!-- End of sevenths section -->
+
+                <!-- Start of other options section -->
+                <div class="other-section col mt-4">
+
+                  <h5>Other</h5>
+
+                  <input type="checkbox" id="suspended" name="chord" value="suspended">
+                  <label for="suspended" class="text-white ml-2">Suspended</label><br>
+
+                  <input type="checkbox" id="Extended" name="chord" value="Extended">
+                  <label for="Extended" class="text-white ml-2">Extended</label><br>
+                </div>
+                <!-- End of other options section -->
+              </div>
+
+              <!-- Start of button section -->
+              <div class="row no-gutters">
+                  <div class="my-4 mr-3">
+                    <button type="button" name="button" onclick="randomizeCheckboxes()" class="rounded-lg btn-padding container-background text-white border border-white">Randomize</button>
+                  </div>
+                  <div class="my-4">
+                    <button type="button" name="button" onclick="clearCheckboxes()" class="rounded-lg btn-padding container-background text-white border border-white">Clear</button>
+                  </div>
+              </div>
+              <!-- End of button section -->
+            </div>
+          </div>
+          <div class="col-md-5 offset-md-1 col container-background rounded-lg header">
+            <h3 class="text-white mt-3 container-padding">Other Settings</h3>
+          </div>
+        </div> <!-- End of row -->
+      </div>
+      <!-- End of chord type section -->
+
+
+    </form>
+  </body>
+</html>
