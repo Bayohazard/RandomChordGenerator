@@ -5,21 +5,22 @@
     <title>Random Chord Generator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js" charset="utf-8"></script>
   </head>
   <body>
     <h1 class="text-center text-white my-4">Random Chord Generator</h1>
-    <form action="index.html" method="post">
+    <form action="index.html" method="post" onsubit="generateChords()" id="form">
 
       <!-- Start of chord type section -->
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col container-background rounded-lg header">
+          <div class="col-md-5 col container-background rounded-lg header">
             <h3 class="text-white mt-3 container-padding">Chord Type</h3>
             <div class="container">
               <div class="row no-gutters">
                 <!-- Start of triads section -->
-                <div class="triads-section col-md-6 mt-4">
+                <div class="triads-section col-md-5 mt-4">
 
                   <h5>Triads</h5>
 
@@ -72,11 +73,14 @@
 
               <!-- Start of button section -->
               <div class="row no-gutters">
-                  <div class="my-4 mr-3">
+                  <div class="my-4 mx-1">
                     <button type="button" name="button" onclick="randomizeCheckboxes()" class="rounded-lg btn-padding container-background text-white border border-white">Randomize</button>
                   </div>
-                  <div class="my-4">
+                  <div class="my-4 mx-1">
                     <button type="button" name="button" onclick="clearCheckboxes()" class="rounded-lg btn-padding container-background text-white border border-white">Clear</button>
+                  </div>
+                  <div class="my-4 mx-1">
+                    <button type="button" name="button" onclick="selectAllCheckboxes()" class="rounded-lg btn-padding container-background text-white border border-white">Select All</button>
                   </div>
               </div>
               <!-- End of button section -->
@@ -84,12 +88,37 @@
           </div>
           <div class="col-md-5 offset-md-1 col container-background rounded-lg header">
             <h3 class="text-white mt-3 container-padding">Other Settings</h3>
+            <div class="container">
+              <div class="row">
+                <div class="col mt-3">
+                  <h5># of Chords</h5>
+                  <select class="num-chords-selector w-25 light-gray text-white" name="num-chord-selector">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
         </div> <!-- End of row -->
       </div>
       <!-- End of chord type section -->
 
-
+      <div class="submit-div text-center mt-4">
+        <input type="submit" name="generate" value="Generate" class="rounded-lg btn-padding container-background text-white border border-white">
+      </div>
     </form>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-12 container-background h-100">
+          <h3 class="text-white mt-3">Results</h3>
+          <div class="container inner-container h-75 my-3 py-3">
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

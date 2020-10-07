@@ -19,10 +19,18 @@ body {
   padding: .3rem .5rem;
 }
 
-button:hover {
+button:hover, input[type=submit]:hover {
   background-color: #4F4F4F;
 }
 
 .container-padding {
   padding: 0 15px;
+}
+
+.inner-container {
+  background-color: #5F5F5F;
+}
+
+.light-gray {
+  background-color: #4D4D4D;
 }

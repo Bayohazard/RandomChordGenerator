@@ -1,5 +1,6 @@
+const checkboxes = document.getElementsByName("chord");
+
 function randomizeCheckboxes() {
-  const checkboxes = document.getElementsByName("chord");
   const randomNumber = Math.floor(Math.random() * checkboxes.length) + 1;
 
   for (var i = 0; i < randomNumber; i++) {
@@ -9,9 +10,13 @@ function randomizeCheckboxes() {
 }
 
 function clearCheckboxes() {
-  const checkboxes = document.getElementsByName("chord");
   checkboxes.forEach((checkbox) => {
     checkbox.checked = false;
   });
+}
 
+function selectAllCheckboxes() {
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = true;
+  });
 }
